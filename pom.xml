@@ -6,7 +6,15 @@
 
     <groupId>org.example</groupId>
     <artifactId>iron_man</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>iron-man-web</module>
+        <module>iron-man-service</module>
+        <module>iron-man-dao</module>
+        <module>iron-man-api</module>
+        <module>iron-man-common</module>
+    </modules>
     <properties>
         <java.version>1.8</java.version>
     </properties>
