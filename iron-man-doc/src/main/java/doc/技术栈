@@ -1,0 +1,16 @@
+暂定技术方案是springboot 作为主要的技术栈 tkmapper+ mybatis+mapper 服务之间的调用暂定dubbo
+
+api 对外暴露服务，对外暴露可以是dubbo 方式 也可以是eureka方式
+
+springboot+tkmapper
+1. 引入jar包
+2. 修改配置文件
+3. 配置基础的basemaper--->不能被mapperscan 扫描到
+4. 编写配置文件，配置 basemapper xml文件位置，damain位置
+5 编写测试用例
+
+记录：
+hotfix/init_project_20200420
+1. 项目基础能力建设（统一返回对象，统一异常）
+note: 统一日志暂不考虑， 部署时候集成elk
+

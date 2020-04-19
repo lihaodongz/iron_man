@@ -11,5 +11,23 @@
 
     <artifactId>iron-man-service</artifactId>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>iron-man-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+         </dependency>
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>iron-man-dao</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>iron-man-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>
