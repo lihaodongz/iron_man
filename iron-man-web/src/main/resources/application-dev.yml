@@ -1,0 +1,25 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: iron-web
+  datasource:
+    url: jdbc:mysql://localhost:3306/mall?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&nullCatalogMeansCurrent=true&useSSL=false
+    username: root #数据库用户名
+    password: 123456 #数据库密码
+    driver-class-name: com.mysql.jdbc.Driver
+    initialSize: 10 #初始化连接池大小
+    minIdle: 10 #初始化最小连接池数量
+    maxActive: 100 #初始化最大连接池数量
+    maxWait: 6000 #配置获取连接等待超时的时间
+    timeBetweenEvictionRunsMills: 6000 #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+    minEvictableIdleTimeMillis: 30000 #配置一个连接在池中最小生存的时间，单位是毫秒
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.biz.ironman.dao.dataobject
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+mapper:
+  mappers: com.biz.ironman.dao.base.TkBaseMapper
+  identity: MYSQL
