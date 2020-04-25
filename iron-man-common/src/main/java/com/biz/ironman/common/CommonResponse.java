@@ -14,7 +14,6 @@ import java.io.Serializable;
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class CommonResponse <T>  implements Serializable {
-
     private Integer code;
     private Boolean success;
     private String msg;

@@ -13,8 +13,10 @@ import javax.jnlp.IntegrationService;
 
 public enum  CommonCode {
 
+    PARAMETER_ERROR(10003,"参数异常"),
     UN_KNOW(10002,"未知异常"),
     USER_NOT_LOGIN(20000,"用户未登陆"),
+    USER_ERROR(20001,"用户名或者密码错误"),
     SUCCESS(10000,"SUCCESS");
 
     private Integer code;

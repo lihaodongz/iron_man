@@ -1,5 +1,9 @@
 package com.biz.ironman.dao.dataobject;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import sun.security.provider.certpath.PKIXTimestampParameters;
 
 import javax.persistence.GeneratedValue;
@@ -14,10 +18,14 @@ import java.util.Date;
  * @date 2020/4/19 11:05
  **/
 @Table(name = "mall_category")
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Category {
 
     @Id()
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long parentId;
     private String name;

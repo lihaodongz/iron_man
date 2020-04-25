@@ -2,9 +2,8 @@ package com.biz.ironman.exception;
 
 import com.biz.ironman.common.CommonCode;
 import com.biz.ironman.common.CommonResponse;
-import com.biz.ironman.common.ResultBilder;
+import com.biz.ironman.common.ResultBuilder;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -23,8 +22,8 @@ public class GlobalException {
         if (e instanceof BusinessException){
             log.error("发生异常，{}",e.getMessage());
             BusinessException exception = (BusinessException)e;
-            return ResultBilder.fail(exception);
+            return ResultBuilder.fail(exception);
         }
-        return ResultBilder.fail(CommonCode.UN_KNOW);
+        return ResultBuilder.fail(CommonCode.UN_KNOW);
     }
 }

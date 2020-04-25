@@ -1,6 +1,7 @@
 package com.biz.ironman.service;
 
 import com.biz.ironman.dao.dataobject.User;
+import com.biz.ironman.exception.BusinessException;
 import com.biz.ironman.vo.UserVo;
 
 import java.rmi.registry.Registry;
@@ -17,9 +18,9 @@ public interface UserService {
 
     List<User> fetchUserList();
 
-    Integer login(User user);
+    boolean login(UserVo userVo) throws BusinessException;
 
-    Integer registry(User user);
+    void registry(UserVo userVo) throws BusinessException;
 
 
 }

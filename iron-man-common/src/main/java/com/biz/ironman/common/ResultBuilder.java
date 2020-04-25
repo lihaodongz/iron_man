@@ -7,7 +7,7 @@ import com.biz.ironman.exception.BusinessException;
  * @description
  * @date 2020/4/19 9:33
  **/
-public class ResultBilder {
+public class ResultBuilder {
 
 
 
@@ -44,4 +44,13 @@ public class ResultBilder {
         response.setMsg(commonCode.getMsg());
         return response;
     }
+
+    public static CommonResponse fail(CommonCode commonCode,String msg){
+        CommonResponse response = new CommonResponse();
+        response.setSuccess(false);
+        response.setCode(commonCode.getCode());
+        response.setMsg(msg);
+        return response;
+    }
+
 }
