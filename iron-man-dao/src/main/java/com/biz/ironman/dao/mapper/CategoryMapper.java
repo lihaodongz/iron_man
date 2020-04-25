@@ -5,8 +5,10 @@ import com.biz.ironman.dao.dataobject.Category;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
+import sun.awt.image.IntegerComponentRaster;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author 李浩东
@@ -17,13 +19,8 @@ import java.util.List;
 public interface CategoryMapper  extends TkBaseMapper<Category> {
 
 
-    /**
-     * 按照父id查询
-     * @param parentId
-     * @return
-     */
     @Select("select * form mall_category where parent_id = #{parent_id}")
-    List<Category> selectByParentId(@Param("parent_id") Long parentId);
+    List<Category> selectByParentId(@Param("parent_id") Integer parentId);
 
 
 }

@@ -1,9 +1,11 @@
 package com.biz.ironman.service;
 
 import com.biz.ironman.dao.dataobject.Category;
+import com.biz.ironman.exception.BusinessException;
 import com.biz.ironman.vo.CategoryVo;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author 李浩东
@@ -22,4 +24,7 @@ public interface CategoryService {
      * @return
      */
     List<CategoryVo> fetchAllCategory();
+
+
+    Set<Long> fetchSubCategory(Long id, Set<Long> resultSet) throws BusinessException;
 }
