@@ -7,12 +7,14 @@ import com.biz.ironman.service.GoodsService;
 import com.biz.ironman.service.UserService;
 import com.biz.ironman.vo.GoodsRespVo;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import sun.util.locale.provider.LocaleServiceProviderPool;
 
 import javax.annotation.Resource;
-import javax.jnlp.IntegrationService;
 import java.util.List;
 
 /**
@@ -25,13 +27,15 @@ import java.util.List;
 public class GoodsController {
 
 
+    Logger logger = LoggerFactory.getLogger(GoodsController.class);
+
     @Resource
-    GoodsService goodsService;
+    private GoodsService goodsService;
 
     @GetMapping("/goodsList")
     public CommonResponse<List<GoodsRespVo>> getGoodsPage(@RequestParam("cateGoryId") Integer cateGoryId) {
+        logger.info("=================="+cateGoryId);
         GetGoodsRep request = new GetGoodsRep();
-        request.setCategoryId(cateGoryId == null ? 0 :cateGoryId);
         try {
             List<GoodsRespVo> goodsByCate = goodsService.getGoodsByCate(request);
             return ResultBuilder.success(goodsByCate);

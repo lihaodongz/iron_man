@@ -3,4 +3,14 @@
 
 <mapper namespace="com.biz.ironman.dao.mapper.UserMapper">
 
+    <sql id="tableName">
+        mall_user
+    </sql>
+    <insert id="insert">
+        insert into
+        <include refid="tableName"/>
+        (username,password,role,email)
+        VALUES
+        (#{user.username},#{user.password},#{user.role},#{user.email})
+    </insert>
 </mapper>

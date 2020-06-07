@@ -2,9 +2,8 @@ package com.biz.ironman.dao.mapper;
 
 import com.biz.ironman.dao.base.TkBaseMapper;
 import com.biz.ironman.dao.dataobject.User;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
-import tk.mybatis.mapper.common.Mapper;
-import tk.mybatis.mapper.common.base.BaseSelectMapper;
 
 /**
  * @author 李浩东
@@ -15,5 +14,7 @@ import tk.mybatis.mapper.common.base.BaseSelectMapper;
 public interface UserMapper extends TkBaseMapper<User> {
 
     User findByUsername(String username);
+
+    int insert(@Param("user") User user);
 
 }

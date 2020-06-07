@@ -23,4 +23,5 @@ public interface CategoryMapper  extends TkBaseMapper<Category> {
     List<Category> selectByParentId(@Param("parent_id") Integer parentId);
 
 
+    List<Category> selectAll();
 }

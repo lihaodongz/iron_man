@@ -29,6 +29,5 @@ public class categoryTest   {
         HashSet<Long> resultSet = new HashSet<>();
        categoryService.fetchSubCategory(100001l, resultSet);
        log.info("result:{}",resultSet);
-
     }
 }

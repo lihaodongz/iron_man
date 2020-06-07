@@ -13,8 +13,8 @@ public class GetGoodsRep {
      * 类目id
      */
     private Integer categoryId;
-    /**
-     * 商品id
-     */
-    private Integer id;
+
+    private Integer pageNum;
+
+    private Integer pageSize;
 }

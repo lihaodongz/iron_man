@@ -1,7 +1,9 @@
 package com.biz.ironman.dao.dataobject;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.omg.CORBA.StringHolder;
 
 import javax.persistence.*;
@@ -16,6 +18,8 @@ import java.util.Date;
 @Data
 @Table(name = "mall_user")
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

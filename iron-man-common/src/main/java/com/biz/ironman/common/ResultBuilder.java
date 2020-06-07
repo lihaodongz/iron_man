@@ -9,8 +9,6 @@ import com.biz.ironman.exception.BusinessException;
  **/
 public class ResultBuilder {
 
-
-
     public static CommonResponse success(){
         CommonResponse response = new CommonResponse();
         response.setSuccess(true);
@@ -28,6 +26,14 @@ public class ResultBuilder {
         return response;
     }
 
+    public static <T> CommonResponse successWithPaginator(T data){
+        CommonResponse<T> response = new CommonResponse<T>();
+        response.setSuccess(true);
+        response.setCode((CommonCode.SUCCESS.getCode()));
+        response.setMsg(CommonCode.SUCCESS.getMsg());
+        response.setData(data);
+        return response;
+    }
     public static CommonResponse fail(CommonCode commonCode){
         CommonResponse response = new CommonResponse();
         response.setSuccess(false);
@@ -52,5 +58,4 @@ public class ResultBuilder {
         response.setMsg(msg);
         return response;
     }
-
 }

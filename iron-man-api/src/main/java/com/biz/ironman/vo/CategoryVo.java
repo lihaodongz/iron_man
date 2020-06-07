@@ -1,5 +1,6 @@
 package com.biz.ironman.vo;
 
+import lombok.Builder;
 import lombok.Data;
 
 import java.util.Date;

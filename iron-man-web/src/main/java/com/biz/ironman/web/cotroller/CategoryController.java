@@ -29,9 +29,10 @@ public class CategoryController {
 
     @GetMapping("/category")
     public CommonResponse<List<CategoryVo>> getcategory(){
-        List<CategoryVo> categories =
-                categoryService.fetchCategoryWithParent(0L);
-        return ResultBuilder.success(categories);
+      //  List<CategoryVo> categories =
+            //    categoryService.fetchCategoryWithParent(0L);
+        List<CategoryVo> categoryVos = categoryService.fetchCategory();
+        return ResultBuilder.success(categoryVos);
     }
 
     @GetMapping("/categorys")

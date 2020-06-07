@@ -3,7 +3,6 @@ package com.biz.ironman.exception;
 import com.biz.ironman.common.CommonCode;
 import lombok.Data;
 
-import javax.jnlp.IntegrationService;
 
 /**
  * @author 李浩东

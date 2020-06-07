@@ -27,4 +27,9 @@ public interface CategoryService {
 
 
     Set<Long> fetchSubCategory(Long id, Set<Long> resultSet) throws BusinessException;
+
+     List<CategoryVo> fetchCategory();
+
+
+     void fetchSubCategory(Integer id,Set<Long> resultSet) throws BusinessException;
 }

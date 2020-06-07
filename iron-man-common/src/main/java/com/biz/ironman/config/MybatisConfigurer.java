@@ -11,7 +11,6 @@ import org.springframework.core.io.support.ResourcePatternResolver;
 import tk.mybatis.spring.mapper.MapperScannerConfigurer;
 
 import javax.sql.DataSource;
-import java.io.IOException;
 import java.util.Properties;
 
 /**
@@ -56,7 +55,7 @@ public class MybatisConfigurer {
     @Bean
     public PageHelper pageHelper(){
         PageHelper pageHelper = new PageHelper();
-    Properties properties = new Properties();
+        Properties properties = new Properties();
         properties.setProperty("offsetAsPageNum","true");
         properties.setProperty("rowBoundsWithCount","true");
         properties.setProperty("reasonable","true");

@@ -20,10 +20,10 @@ public class GlobalException {
     @ExceptionHandler(BusinessException.class)
     public CommonResponse exceptionHandler(Exception e){
         if (e instanceof BusinessException){
-            log.error("发生异常，{}",e.getMessage());
             BusinessException exception = (BusinessException)e;
             return ResultBuilder.fail(exception);
         }
+        // TODO: 2020/6/6  目前只处理businessexception 其他异常全部未知错误 
         return ResultBuilder.fail(CommonCode.UN_KNOW);
     }
 }

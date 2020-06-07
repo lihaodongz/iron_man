@@ -15,12 +15,13 @@
         <include refid="baseField"/>
         FROM
         <include refid="tableName"/>
-        <if test="cateGoryIds != null"></if>
-        where  category_id   in
-        <foreach collection="cateGoryIds" index="index"  item="item" open="(" separator="," close=")">
-            #{item}
-        </foreach>
-
+        where status = 1
+        <if test="cateGoryIds.size() > 0">
+            and category_id in
+            <foreach collection="cateGoryIds" index="index"  item="item" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+        </if>
     </select>
 
 </mapper>

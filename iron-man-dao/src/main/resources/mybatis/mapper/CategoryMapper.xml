@@ -6,5 +6,10 @@
         mall_category
     </sql>
 
+    <select id="selectAll" resultType="com.biz.ironman.dao.dataobject.Category">
+        select *  from
+        <include refid="tableName"/>
+         where `status` = 1
+    </select>
 
 </mapper>

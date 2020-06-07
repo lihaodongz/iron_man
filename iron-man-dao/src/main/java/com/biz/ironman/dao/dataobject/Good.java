@@ -2,9 +2,7 @@ package com.biz.ironman.dao.dataobject;
 
 import lombok.Data;
 
-import javax.jnlp.IntegrationService;
 import javax.persistence.*;
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
