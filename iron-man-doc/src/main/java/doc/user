@@ -1,0 +1,1 @@
+ 1. 全局的异常捕获（controlleradvice）是否可以捕获controller层抛出的异常。目前已知是可以捕获到service抛出的异常
